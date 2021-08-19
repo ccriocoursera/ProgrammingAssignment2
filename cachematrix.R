@@ -13,10 +13,10 @@ makeCacheMatrix <- function(a = matrix()) {
     ## This is for saving matrix within function to parent environment.
     a <<- b                  
     ## This is for resetting the state when needed.
-    k <<- NULL               
+    c <<- NULL               
   }
   ## This is for getting the matrix. The get function will be defined and will be used to get the matrix x.
-  get <- function()                                     
+  get <- function() a                                    
   ## This is for setting the inverse of the matrix. The value of k is assigned to its parent environment.
   setInverse <- function(inverse) c <<- inverse         
   ## This is for getting the inverse of the matrix. This will return the property of inverse.
